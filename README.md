@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Markdown Blog
 
-## Getting Started
+This is a simple static blog built with **Next.js** where blog posts are written in plain **Markdown (`.md`) files**. It uses **static generation** to load and render posts, supports **frontmatter**, and applies **custom CSS** for styling.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- ✅ Write blog posts in `/blogs` as `.md` files
+- ✅ Automatically generate pages for each post
+- ✅ Clean layout with centered content
+- ✅ Responsive design with readable typography
+- ✅ Ordered lists, images with border-radius, code blocks, etc.
+- ✅ Uses `remark`, `remark-html`, and `gray-matter` for Markdown parsing
+
+---
+
+## 📁 Folder Structure
+
+```
+.
+├── app/
+│   ├── blog/
+│   │   └── [slug]/
+│   │       └── page.tsx     # Renders each blog post
+│   └── page.tsx             # Blog homepage (list of posts)
+├── blogs/                   # Markdown files live here
+│   └── first-post.md
+├── lib/
+│   └── blogs.ts             # Markdown parsing utilities
+├── public/
+├── styles/
+│   └── globals.css          # Global CSS styling
+├── types/
+│   └── blog.ts              # Blog metadata types
+├── next.config.js
+├── tsconfig.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/your-username/markdown-blog.git
+cd markdown-blog
+npm install
+npm run dev
+```
 
-## Learn More
+Visit: [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧠 Writing Blog Posts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Create a new file in the `blogs/` folder:
+   ```
+   blogs/my-post.md
+   ```
 
-## Deploy on Vercel
+2. Use this format:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```markdown
+   ---
+   title: "My Awesome Post"
+   date: "2025-06-22"
+   ---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   This is my post content.
+
+   1. First item
+   2. Second item
+
+   ![Alt text](https://via.placeholder.com/400)
+   ```
+
+---
+
+## 🧩 Tech Stack
+
+- [Next.js App Router](https://nextjs.org/docs/app) (13+)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Gray-matter](https://github.com/jonschlinkert/gray-matter)
+- [Remark](https://github.com/remarkjs/remark)
+- [Plain CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) (no Tailwind)
+
+---
+
+## 💡 Customization Ideas
+
+- Add author name in frontmatter
+- Add tags/categories
+- Add search or filtering
+- Add a reading time indicator
+- Use MDX for advanced interactivity
+
+---
+
+## 📄 License
+
+MIT License. Use freely and customize as you like.
