@@ -84,7 +84,7 @@ Visit: [http://localhost:3000](http://localhost:3000)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Gray-matter](https://github.com/jonschlinkert/gray-matter)
 - [Remark](https://github.com/remarkjs/remark)
-- [Plain CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) (no Tailwind)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ---
 
