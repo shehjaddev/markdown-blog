@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.blogpost img {
+  border-radius: 0.5rem; /* rounded-md */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+}
+
+.blogpost h1 {
+  @apply text-xl font-semibold py-3;
+}
+
+.blogpost h2 {
+  @apply text-base font-semibold py-3;
+}
+
+.blogpost p {
+  @apply text-sm pb-3;
+}
+
+.blogpost ol {
+  list-style-type: decimal;
+  padding-left: 1rem;
+}
+
+.blogpost ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
